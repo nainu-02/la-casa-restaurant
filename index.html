@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casa Restaurant</title>
+
+    <link rel="stylesheet" href="restaurant.css">
+    <script src="restaurant.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                La<span>Casa</span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <button id="darkMode">🌙</button>
+                <button class="menu-btn" id="menuBtn">☰</button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="small-title">WELCOME TO LA CASA</p>
+
+            <h1>
+                Delicious Food.<br>
+                <span>Beautiful Moments.</span>
+            </h1>
+
+            <p>
+                Fresh ingredients, delicious recipes and an unforgettable
+                dining experience.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn">Explore Menu</a>
+                <button class="btn secondary" onclick="orderNow()">
+                    Order Now
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+            <div class="image-box">
+                🍽️
+            </div>
+        </div>
+
+        <div class="about-content">
+
+            <p class="small-title">ABOUT US</p>
+
+            <h2>
+                We Cook With <span>Passion</span>
+            </h2>
+
+            <p>
+                At La Casa, we believe food is more than just a meal.
+                It's an experience. Our chefs prepare every dish with
+                fresh ingredients and special care.
+            </p>
+
+            <div class="features">
+
+                <div>
+                    <strong>15+</strong>
+                    <span>Years Experience</span>
+                </div>
+
+                <div>
+                    <strong>50+</strong>
+                    <span>Food Items</span>
+                </div>
+
+                <div>
+                    <strong>10k+</strong>
+                    <span>Happy Customers</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Menu -->
+    <section class="menu-section" id="menu">
+
+        <div class="section-title">
+            <p class="small-title">OUR MENU</p>
+            <h2>Popular <span>Dishes</span></h2>
+            <p>Try our customer's favorite dishes.</p>
+        </div>
+
+
+        <div class="menu-container">
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍔
+                </div>
+
+                <div class="food-info">
+                    <h3>Classic Burger</h3>
+                    <p>Juicy beef, cheese, lettuce and special sauce.</p>
+
+                    <div class="food-bottom">
+                        <strong>Rs. 850</strong>
+                        <button onclick="orderFood('Classic Burger')">
+                            Order
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍕
+                </div>
+
+                <div class="food-info">
+                    <h3>Italian Pizza</h3>
+                    <p>Fresh mozzarella, tomato sauce and herbs.</p>
+
+                    <div class="food-bottom">
+                        <strong>Rs. 1,250</strong>
+                        <button onclick="orderFood('Italian Pizza')">
+                            Order
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍝
+                </div>
+
+                <div class="food-info">
+                    <h3>Creamy Pasta</h3>
+                    <p>Creamy pasta with chicken and parmesan cheese.</p>
+
+                    <div class="food-bottom">
+                        <strong>Rs. 950</strong>
+                        <button onclick="orderFood('Creamy Pasta')">
+                            Order
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="food-card">
+
+                <div class="food-image">
+                    🍗
+                </div>
+
+                <div class="food-info">
+                    <h3>Grilled Chicken</h3>
+                    <p>Perfectly grilled chicken with special spices.</p>
+
+                    <div class="food-bottom">
+                        <strong>Rs. 1,100</strong>
+                        <button onclick="orderFood('Grilled Chicken')">
+                            Order
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <div class="contact-content">
+
+            <p class="small-title">CONTACT US</p>
+
+            <h2>Let's <span>Talk</span></h2>
+
+            <p>
+                Have a question or want to make a reservation?
+                Contact us today.
+            </p>
+
+            <div class="contact-info">
+                <p>📍 Islamabad, Pakistan</p>
+                <p>📞 +92 300 1234567</p>
+                <p>✉️ hello@lacasa.com</p>
+            </div>
+
+        </div>
+
+
+        <form id="contactForm">
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            La<span>Casa</span>
+        </div>
+
+        <p>© 2026 La Casa Restaurant. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
